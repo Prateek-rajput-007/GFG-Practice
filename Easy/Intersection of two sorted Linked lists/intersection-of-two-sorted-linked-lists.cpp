@@ -44,27 +44,6 @@ void printList(Node* n)
     else cout<< " ";
 }
 
-Node* findIntersection(Node* head1, Node* head2);
-
-int main()
-{
-	int t;
-	cin>>t;
-	while(t--)
-	{
-	    int n,m;
-	    cin>> n >> m;
-	    
-	    Node* head1 = inputList(n);
-	    Node* head2 = inputList(m);
-	    
-	    Node* result = findIntersection(head1, head2);
-	    
-	    printList(result);
-	    cout<< endl;
-	}
-	return 0;
-}
 
 // } Driver Code Ends
 
@@ -83,7 +62,9 @@ struct Node
 };
 
 */
-
+class Solution{
+    
+    public:
 Node* findIntersection(Node* head1, Node* head2)
 {
     // Your Code Here
@@ -118,3 +99,28 @@ Node* findIntersection(Node* head1, Node* head2)
     
     return ansHead;
 }
+};
+
+//{ Driver Code Starts.
+int main()
+{
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n,m;
+	    cin>> n >> m;
+	    
+	    Node* head1 = inputList(n);
+	    Node* head2 = inputList(m);
+	    
+	    Solution ob;
+	    Node* result = ob.findIntersection(head1, head2);
+	    
+	    printList(result);
+	    cout<< endl;
+	}
+	return 0;
+}
+
+// } Driver Code Ends
